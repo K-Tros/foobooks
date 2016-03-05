@@ -29,3 +29,16 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+Route::get('/books', 'BookController@getIndex');
+Route::get('/book/create', 'BookController@getCreate');
+Route::post('/book/create', 'BookController@getPost');
+Route::get('/book/{id}', 'BookController@getShow');
+
+Route::get('practice', function() {
+
+    echo config('app.env');
+
+    return ' practice';
+
+});
