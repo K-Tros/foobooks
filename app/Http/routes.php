@@ -37,7 +37,8 @@ Route::get('/book/{id}', 'BookController@getShow');
 
 Route::get('practice', function() {
 
-    echo config('app.env');
+    $random = new Random();
+    return $random->getRandomString(10);
 
     return ' practice';
 
